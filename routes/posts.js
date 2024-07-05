@@ -10,6 +10,14 @@ let posts = [
     { id: 3, title: 'Post Three'}
   ];
 
+/* Route Level Middleware */
+// const logger = (req, res, next) => {
+//     console.log(`${req.method} ${req.protocol}://${req.get('host')}${req.originalUrl}`);
+//     next();
+// };
+// NOTE: to used this you need to put it into the function name on the argument of request functions */
+// Example: router.get('/', logger, (req, res) => {});
+
 /*----------------------------- CRUD FUNCTIONS -----------------------------*/
 
 /* CREATE | POSTS */
