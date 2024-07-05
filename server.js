@@ -4,6 +4,7 @@ import express from 'express';
 import path from 'path';
 import posts from './routes/posts.js';
 import logger from './middleware/logger.js' // Import App Level Middleware
+import errorHandler from './middleware/error.js'; // Custom Error Handler
 const port = process.env.PORT || 8000;
 
 const app = express();
@@ -21,5 +22,8 @@ app.use(logger);
 
 // Routes
 app.use('/api/posts', posts);
+
+// Used Custom Error Handler
+app.use(errorHandler);
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
