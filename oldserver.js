@@ -1,8 +1,8 @@
-// ES MODULE VERSION
+// COMMON JS MODULE VERSION
 
-import express from 'express';
-import path from 'path';
-import posts from './routes/posts.js';
+const express = require('express');
+const path = require('path');
+const posts = require('./routes/posts');
 const port = process.env.PORT || 8000;
 
 const app = express();
